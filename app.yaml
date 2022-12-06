@@ -2,7 +2,7 @@ apiVersion: core.oam.dev/v1beta1
 kind: Application
 metadata:
   name: first-vela-app
-  namespace: test
+  namespace: gitops-demo
 spec:
   components:
     - name: express-server
@@ -28,7 +28,7 @@ spec:
       properties:
         clusters: ["local"]
         # 此命名空间需要在应用部署前完成创建
-        namespace: "test"
+        namespace: "gitops-demo"
     - name: deploy-ha
       type: override
       properties:
